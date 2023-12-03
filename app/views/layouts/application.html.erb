@@ -13,10 +13,6 @@
 
   <body>
     <header>
-      <a class="navbar-brand" href="/">
-        <span>Bookers2</span>
-      </a>
-      
       <div class="navbar-brand">
         <%= link_to "Bookers2", root_path %>
       </div>
@@ -40,7 +36,7 @@
           <%= link_to "Home", '/'%>
         </li>
         <li>
-          <%= link_to "About", '/home/about' %>
+          <%= link_to "About", about_path %>
         </li>
         <li>
           <%= link_to "Signup", new_user_registration_path %>
