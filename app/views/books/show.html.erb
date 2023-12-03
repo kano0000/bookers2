@@ -20,7 +20,7 @@
       </div>
       <div class="new_book">
         <h2>New book</h2>
-        <%= form_with model: @book_ do |f| %>
+        <%= form_with model: @book_new do |f| %>
           <p>Title</p>
             <%= f.text_field :title %>
           <p>Opinion</p>
@@ -45,6 +45,15 @@
               <% end %>
             </td>
             <td><%= @book.body%></td>
+            <% if @user == current_user %>
+            <td>
+              <%= link_to "Edit", edit_book_path(@book.id), class:"btn btn-success"%>
+            </td>
+            <td>
+              <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？"
+                  class:"btn btn-danger"%>
+            </td>
+            <% end %>
           </tr>
           <tr>
             <td>
