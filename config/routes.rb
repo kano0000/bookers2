@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #   get '/users/sign_out' => 'devise/sessions#destroy'
   # end
   devise_for :users
-  resources :books, only: [:index, :show, :new, :edit]
+  resources :books, only: [:index, :show, :new, :edit, :create]
   resources :users, only: [:index, :show, :edit]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
