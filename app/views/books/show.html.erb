@@ -1,34 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="user_info">
-        <h2>User info</h2>
-        <%= image_tag @user.get_profile_image(100,100)%>
-        <table>
-          <tr>
-            <th>name</th>
-            <th><%= @user.name %></th>
-          </tr>
-          <tr>
-            <th>introduction</th>
-            <th><%= @user.introduction%></th>
-          </tr>
-        </table>
-        <%= link_to edit_user_path(@user.id) do%>
-          <i class="fa-solid fa-user-gear"></i>
-        <% end %>
-      </div>
-      <div class="new_book">
-        <h2>New book</h2>
-        <%= form_with model: @book_new do |f| %>
-          <p>Title</p>
-            <%= f.text_field :title %>
-          <p>Opinion</p>
-            <%= f.text_area :body %>
-            <%= f.submit 'Create Book', class:"btn btn-success" %>
-        <% end %>
-      </div>
-    </div>
+<%= render 'new', user: @user, book_new: @book_new%>
+
 
     <div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
@@ -50,7 +21,7 @@
               <%= link_to "Edit", edit_book_path(@book.id), class:"btn btn-success"%>
             </td>
             <td>
-              <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？"
+              <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？",
                   class:"btn btn-danger"%>
             </td>
             <% end %>
