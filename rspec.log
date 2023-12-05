@@ -53,7 +53,7 @@ Failures:
 
   1) Book モデルに関するテスト 実際に保存してみる 有効な投稿内容の場合は保存されるか
      [31mFailure/Error: expect(FactoryBot.build(:book)).to be_valid[0m
-     [31m  expected #<Book id: nil, title: "1kna0", body: "d8atoxbq4kebtvuno33k", user_id: nil, created_at: nil, updated_at: nil> to be valid, but got errors: User must exist[0m
+     [31m  expected #<Book id: nil, title: "7c81z", body: "9ox8l2zqmlbyvy9ja2hp", user_id: nil, created_at: nil, updated_at: nil> to be valid, but got errors: User must exist[0m
      [36m# ./spec/models/book_spec.rb:8:in `block (3 levels) in <top (required)>'[0m
 
   2) Book モデルに関するテスト titleを空白で投稿した場合に画面にエラーメッセージが表示されているか エラーメッセージは正しく表示されるか
@@ -422,7 +422,7 @@ Failures:
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/factory_bot-6.4.2/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
       [36m# ./spec/system/books_spec.rb:4:in `block (2 levels) in <main>'[0m
 
-Finished in 0.81729 seconds (files took 4.26 seconds to load)
+Finished in 0.71204 seconds (files took 1.63 seconds to load)
 [31m29 examples, 27 failures[0m
 
 Failed examples:

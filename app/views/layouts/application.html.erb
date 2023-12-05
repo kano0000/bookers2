@@ -16,7 +16,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <div class="navbar-brand">
-          <%= link_to "Bookers", root_path, class: 'nav-link text-light' %>
+          <%= link_to "Bookers", "/", class: 'nav-link text-light' %>
         </div>
         <button class="navbar-toggler" type="button"
           data-toggle="collapse"
@@ -51,12 +51,12 @@
               </li>
             <% else %>
             <li class="nav-item">
-                <%= link_to root_path, class: 'nav-link text-light' do %>
+                <%= link_to "/", class: 'nav-link text-light' do %>
                   <i class="fa-solid fa-house"></i> Home
                 <% end %>
               </li>
               <li class="nav-item">
-                <%= link_to about_path, class: 'nav-link text-light' do %>
+                <%= link_to "/home/about", class: 'nav-link text-light' do %>
                   <i class="fa-solid fa-link"></i> About
                 <% end %>
               </li>
